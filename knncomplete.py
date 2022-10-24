@@ -123,56 +123,56 @@ def k_nearest_neighbors(train, test, num_neighbors):
 
 
 
-# chosen_dataset = input("choose dataset \n 1- iris \n 2- diabetes \n")
-# match chosen_dataset:
-#     case "0" : 
-#         print("iris")
-#         filename = 'iris_without_id.csv'
-#         dataset = load_csv(filename)
-#         for i in range(len(dataset[0])-1):
-#             str_column_to_float(dataset, i)
-#         # convert class column to integers
-#         str_column_to_int(dataset, len(dataset[0])-1)
-#         # define model parameter
-#         num_neighbors = 5
-#         # define a new record
-#         #row = [5.3,1,2.1,1.6]
-#         # creating an empty list
-#         lst = []
-#         # iterating till the range
-#         for i in range(0, len(dataset[0])-1):
-#             if(i==0):print("Enter sepallength")
-#             if(i==1):print("Enter sepalwidth")
-#             if(i==2):print("Enter petallength")
-#             if(i==3):print("Enter petalwidth")
-#             lst.append(float(input())) # adding the element	
-#         print(lst)
+chosen_dataset = input("choose dataset \n 1- iris \n 2- diabetes \n")
+match chosen_dataset:
+    case "1" : 
+        print("iris")
+        filename = 'iris_without_id.csv'
+        dataset = load_csv(filename)
+        for i in range(len(dataset[0])-1):
+            str_column_to_float(dataset, i)
+        # convert class column to integers
+        str_column_to_int(dataset, len(dataset[0])-1)
+        # define model parameter
+        num_neighbors = 5
+        # define a new record
+        #row = [5.3,1,2.1,1.6]
+        # creating an empty list
+        lst = []
+        # iterating till the range
+        for i in range(0, len(dataset[0])-1):
+            if(i==0):print("Enter sepallength")
+            if(i==1):print("Enter sepalwidth")
+            if(i==2):print("Enter petallength")
+            if(i==3):print("Enter petalwidth")
+            lst.append(float(input())) # adding the element	
+        print(lst)
 
-#     case "1" : 
-#         print("diabetes")
-#         # Make a prediction with KNN on diabetes Dataset
-#         filename = 'diabetes.csv'
-#         dataset = load_csv(filename)
-#         for i in range(len(dataset[0])-1):
-#         	str_column_to_float(dataset, i)
-#         # convert class column to integers
-#         str_column_to_int(dataset, len(dataset[0])-1)
-#         # define model parameter
-#         num_neighbors = 5
-#         # define a new record
-#         lst = []
-#         # iterating till the range
-#         for i in range(0, len(dataset[0])-1):
-#             if(i==0):print("Enter sepallength")
-#             if(i==1):print("Enter sepalwidth")
-#             if(i==2):print("Enter petallength")
-#             if(i==3):print("Enter petalwidth")
-#             lst.append(float(input())) # adding the element	
-#         print(lst)
+    case "2" : 
+        print("diabetes")
+        # Make a prediction with KNN on diabetes Dataset
+        filename = 'diabetes.csv'
+        dataset = load_csv(filename)
+        for i in range(len(dataset[0])-1):
+        	str_column_to_float(dataset, i)
+        # convert class column to integers
+        str_column_to_int(dataset, len(dataset[0])-1)
+        # define model parameter
+        num_neighbors = 5
+        # define a new record
+        lst = []
+        # iterating till the range
+        for i in range(0, len(dataset[0])-1):
+            if(i==0):print("Enter sepallength")
+            if(i==1):print("Enter sepalwidth")
+            if(i==2):print("Enter petallength")
+            if(i==3):print("Enter petalwidth")
+            lst.append(float(input())) # adding the element	
+        print(lst)
 
-#     case _ : 
-#         print("Wrong Dataset \n Exiting")
-#         exit()
+    case _ : 
+        print("Wrong Dataset \n Exiting")
+        exit()
 
 
 
@@ -190,29 +190,26 @@ def k_nearest_neighbors(train, test, num_neighbors):
 # row = [400,512,32000,64,16,32,320]
 
 
-filename = 'iris_without_id.csv'
-dataset = load_csv(filename)
-for i in range(len(dataset[0])-1):
-	str_column_to_float(dataset, i)
-# convert class column to integers
-str_column_to_int(dataset, len(dataset[0])-1)
-# define model parameter
-num_neighbors = 5
-# define a new record
-#row = [5.3,1,2.1,1.6]
-# creating an empty list
-lst = []
-# iterating till the range
+# filename = 'iris_without_id.csv'
+# dataset = load_csv(filename)
+# for i in range(len(dataset[0])-1):
+# 	str_column_to_float(dataset, i)
+# # convert class column to integers
+# str_column_to_int(dataset, len(dataset[0])-1)
+# # define model parameter
+# num_neighbors = 5
+# # define a new record
+# #row = [5.3,1,2.1,1.6]
+# # creating an empty list
+# lst = []
+# # iterating till the range
 # for i in range(0, len(dataset[0])-1):
-    # if(i==0):print("Enter sepallength")
-    # if(i==1):print("Enter sepalwidth")
-    # if(i==2):print("Enter petallength")
-    # if(i==3):print("Enter petalwidth")
-lst.append(float(input("Enter sepallength"))) # adding the element	
-lst.append(float(input("Enter sepalwidth"))) # adding the element	
-lst.append(float(input("Enter petallength"))) # adding the element	
-lst.append(float(input("Enter petalwidth"))) # adding the element	
-print(lst)
+#     if(i==0):print("Enter sepallength")
+#     if(i==1):print("Enter sepalwidth")
+#     if(i==2):print("Enter petallength")
+#     if(i==3):print("Enter petalwidth")
+#     lst.append(float(input())) # adding the element	
+# print(lst)
 
 # predict the label
 label = predict_classification(dataset, lst, num_neighbors)
